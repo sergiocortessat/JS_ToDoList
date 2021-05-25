@@ -1,0 +1,6 @@
+body {
+  border: 2px solid black;
+  background-image: linear-gradient(to right, #ab274f, #de3163, #ab274f);
+}
+
+/* Body layout */
