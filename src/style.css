@@ -1,5 +1,3 @@
-
-
 body {
   background-image: linear-gradient(to right, #ab274f, #de3163, #ab274f);
 }
@@ -7,12 +5,11 @@ body {
 /* Body layout */
 
 main > div {
-  min-height: 350px;
   width: 80%;
-  background-color: white;
   border-radius: 7%;
 }
 
-.project-item {
+.project-item,
+.todo-item {
   list-style: none;
 }
