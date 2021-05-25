@@ -1,2 +1,1 @@
-import './layout.css';
-import './maxresdefault.jpg';
+import './style.css';
