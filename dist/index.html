@@ -21,20 +21,37 @@
       <h1 class="text-center">TODO LIST</h1>
     </header>
 
-
     <!-- container todo list -->
-    <main class=" text-dark container d-flex flex-column align-items-start flex-md-row justify-content-center my-4">
+    <main
+      class="
+        text-dark
+        container
+        d-flex
+        flex-column
+        align-items-start
+        flex-md-row
+        justify-content-center
+        my-4
+      "
+    >
       <div class="projects mx-auto mx-md-1 mt-2">
         <h2 class="text-center mt-1">PROJECTS</h2>
+        <div class="project-items"></div>
+
+        <form action="" data-new-list-form="" data-children-count="1">
+          <input type="text" class="new list" data-new-list-input="" placeholder="new list name" aria-label="new list name">
+          <button class="btn create" aria-label="create new list">+</button>
+        </form>
+      
       </div>
       <div class="todo-list mx-auto mx-md-1 mt-2">
-        <h2 class="text-center mt-1">
-          TO DO LIST
-        </h2>
+        <h2 class="text-center mt-1">TO DO LIST</h2>
+        <div class="todo-items">
+
+        </div>
       </div>
     </main>
     <footer></footer>
-
 
     <script src="bundle.js"></script>
     <script
