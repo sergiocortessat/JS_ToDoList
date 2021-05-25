@@ -1,6 +1,4 @@
-* {
-  border: 2px solid black;
-}
+
 
 body {
   background-image: linear-gradient(to right, #ab274f, #de3163, #ab274f);
@@ -13,4 +11,8 @@ main > div {
   width: 80%;
   background-color: white;
   border-radius: 7%;
+}
+
+.project-item {
+  list-style: none;
 }
