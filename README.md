@@ -46,7 +46,7 @@ The Restaurant project pages displays the main menu page of the restaurant with 
 
 Contributions make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## Prequisites
+## Prerequisites
 
 Terminal or similar to execute the program.
 
