@@ -12,4 +12,5 @@ main > div {
   min-height: 350px;
   width: 80%;
   background-color: white;
+  border-radius: 7%;
 }
