@@ -10,6 +10,10 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
 
     <title>Document</title>
   </head>
@@ -36,19 +40,33 @@
     >
       <div class="projects mx-auto mx-md-1 mt-2">
         <h2 class="text-center mt-1">PROJECTS</h2>
-        <div class="project-items"></div>
-
-        <form action="" data-new-list-form="" data-children-count="1">
-          <input type="text" class="new list" data-new-list-input="" placeholder="new list name" aria-label="new list name">
-          <button class="btn create" aria-label="create new list">+</button>
-        </form>
-      
+        <div class="project-items">
+          <ul class="project-items-list container fs-3">
+            <li class="project-item">
+              <button class="btn">
+                <i class="bi bi-folder"></i>
+              </button>
+              Buy pizza
+            </li>
+            <form>
+              <div class="d-flex mb-3">
+                <input
+                  placeholder="New Project"
+                  type="text"
+                  class="form-control"
+                  id="new-project"
+                />
+                <button class="btn">
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </form>
+          </ul>
+        </div>
       </div>
       <div class="todo-list mx-auto mx-md-1 mt-2">
         <h2 class="text-center mt-1">TO DO LIST</h2>
-        <div class="todo-items">
-
-        </div>
+        <div class="todo-items"></div>
       </div>
     </main>
     <footer></footer>
