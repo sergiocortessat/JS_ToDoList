@@ -51,6 +51,7 @@ newProjectBtn.addEventListener('click', (e) => {
     },
   };
   projects.push(project);
+  localStorage.setItem("key", projectName);
   pushToDom();
 });
 function pushToDom() {
@@ -125,3 +126,6 @@ const projects1 = [
 projects1.forEach((x) => {
   console.log(x.ul.length);
 });
+
+
+console.log(localStorage.getItem("key"))
