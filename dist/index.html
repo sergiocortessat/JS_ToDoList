@@ -55,45 +55,41 @@
         </form>
         <div class="project-items">
           <ul class="project-items-list container fs-4">
-            <li class="project-item">
-              <button class="btn">
-                <i class="bi bi-folder"></i>
-              </button>
-              Buy pizza
-            </li>
           </ul>
         </div>
       </div>
 
 
-      <div class="todo-list bg-light mx-auto mx-md-2 mt-2">
-        <div class="todo-header">
-          <h2 class="text-center mt-3">TODO ITEMS</h2>
-        </div>
-        <form class="container">
-          <div class="d-flex mb-3">
-            <input placeholder="New Item" type="text" class="form-control m-1" id="new-item">
-            <button class="btn m-1">
-              <i class="bi bi-plus"></i>
-            </button>
-          </div>
-        </form>
-        <div class="todo-items">
-          <ul class="todo-items-list fs-4">
-            <li class="todo-item mt-1">
-              <button class="btn">
-                <i class="bi bi-journal-check"></i>
-              </button>
-              Buy pizza
-            </li>
-          </ul>
+      <div class="todo-list mx-auto mx-md-2 mt-2">
+        <h2 class="text-center mt-3">TODO ITEMS</h2>
+        <button class="add-todo w-100 btn btn-danger m-1">
+          <i class="bi bi-plus"></i>
+        </button>
+        <div class="todo-items mt-3">
+          <ul class="todo-items-list fs-4"></ul>
         </div>
         <div class="buttons d-flex justify-content-evenly my-3">
-          <button class="btn">Clear Tasks</button>
-          <button class="btn">Delete List</button>
+          <button class="btn btn-danger m-1">Clear Tasks</button>
+          <button class="btn btn-danger m-1">Delete List</button>
         </div>
       </div>
-
+    </main>
+    <div class="mt-5 mb-5 text-center">
+      <form action="" class="form w-50 mx-auto d-none">
+        <label for="title">Title</label>
+        <input class="form-control" type="text" name="title" id="title" /><br />
+        <label for="description">Description</label>
+        <input class="form-control" type="text" name="description" id="description" /><br />
+        <input type="date" id="Due date" name="read" value="Due date" />
+        <label for="Due date">Due date</label><br />
+        <label for="priority">Priority (1-5)</label>
+        <input class="form-control" type="number" name="priority" id="priority" min="1" max="5" /><br />
+        <div class="mt-3">
+          <button class="submit-btn btn btn-danger w-100" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
 
     </main>
     <footer></footer>
