@@ -56,7 +56,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://JS_ToDoList/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\nfunction elementFactory(type) {\n  var element = document.createElement(type);\n  return element;\n}\n\nfunction appendEl(where, element) {\n  var documentElement = document.querySelector(where);\n  documentElement.appendChild(element);\n} // console.log(format(new Date(\"1995, 12, 17\"), 'eeee-MM-dd-yyyy'));\n\n\nvar projectItemsList = document.querySelector('.project-items-list');\nvar listItem = elementFactory('li');\nlistItem.textContent = 'Default';\nlistItem.classList.add('project-item');\nvar buttonItems = elementFactory('button');\nbuttonItems.classList.add('btn');\nvar iListitems = elementFactory('i');\niListitems.classList.add('bi', 'bi-folder');\nbuttonItems.appendChild(iListitems);\nlistItem.appendChild(buttonItems);\nprojectItemsList.appendChild(listItem);\nconsole.log(projectItemsList.childNodes);\n\n//# sourceURL=webpack://JS_ToDoList/./src/index.js?");
 
 /***/ })
 
