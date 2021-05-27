@@ -4,7 +4,7 @@ function myQuery(element) {
   return documentElement;
 }
 // CREATE ELEMENT
-function myElement(type) {
+function myCreate(type) {
   const element = document.createElement(type);
   return element;
 }
@@ -13,4 +13,4 @@ function myAppend(where, element) {
   const documentElement = document.querySelector(where);
   documentElement.appendChild(element);
 }
-export { myQuery, myElement, myAppend };
+export { myQuery, myCreate, myAppend };
