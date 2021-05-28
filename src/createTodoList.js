@@ -1,9 +1,10 @@
 import * as dom from './dom';
+
 function createTodoList(todoList) {
   const todoItem = dom.myCreate('li');
   todoItem.classList.add('todo-item');
   const todoName = dom.myCreate('span');
-  todoName.textContent = todoList.title;
+  todoName.textContent = todoList.itemTitle;
   const todoButton = dom.myCreate('button');
   todoButton.classList.add('btn', 'btn-danger', 'm-1');
   const todoButtonIcon = dom.myCreate('i');
