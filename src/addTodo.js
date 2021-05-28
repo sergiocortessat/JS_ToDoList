@@ -2,6 +2,7 @@ import * as dom from './dom';
 
 const addTodo = dom.myQuery('.add-todo');
 const form = dom.myQuery('.form');
+
 addTodo.addEventListener('click', (e) => {
   if (form.classList.contains('d-none')) {
     e.target.innerHTML = 'Hide Form';
