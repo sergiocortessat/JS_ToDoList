@@ -1,22 +1,35 @@
 import * as dom from './dom';
 
-function createTodoList(todoList) {
+function createTodoList(projects, todoList) {
   const todoItem = dom.myCreate('li');
   todoItem.classList.add('todo-item');
-
   const todoName = dom.myCreate('span');
   todoName.textContent = todoList.itemTitle;
-
   const todoButton = dom.myCreate('button');
-  todoButton.classList.add('todo-list-btn', 'btn', 'btn-danger', 'm-1');
-
+  todoButton.classList.add('todo-list-btn', 'btn', 'btn-danger', 'm-2');
   const todoButtonIcon = dom.myCreate('i');
-  todoButtonIcon.classList.add('bi', 'bi-folder');
-
+  if (todoList.itemStatus === false) {
+    todoButtonIcon.classList.add('bi', 'bi-circle');
+  } else {
+    todoButtonIcon.classList.add('bi', 'bi-check');
+    todoName.classList.add('text-decoration-line-through');
+  }
   todoButton.appendChild(todoButtonIcon);
   todoItem.append(todoButton, todoName);
-
+  todoButton.addEventListener('click', () => {
+    if (todoList.itemStatus === false) {
+      todoList.itemStatus = true;
+      todoButtonIcon.classList.remove('bi', 'bi-circle');
+      todoButtonIcon.classList.add('bi', 'bi-check');
+      todoName.classList.add('text-decoration-line-through');
+    } else {
+      todoList.itemStatus = false;
+      todoButtonIcon.classList.remove('bi', 'bi-check');
+      todoButtonIcon.classList.add('bi', 'bi-circle');
+      todoName.classList.remove('text-decoration-line-through');
+    }
+    localStorage.setItem('projects', JSON.stringify(projects));
+  });
   return todoItem;
 }
-
 export default createTodoList;
