@@ -30,3 +30,10 @@ main > div {
   width: 60%;
   margin: 0 auto;
 }
+
+input {
+  background: #c2b280 !important;
+  opacity: 0.8;
+  color: white !important;
+  font-weight: bolder;
+}
