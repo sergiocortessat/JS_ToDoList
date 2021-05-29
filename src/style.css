@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&family=Stint+Ultra+Condensed&display=swap");
+
 body {
   background-image: linear-gradient(to right, #ab274f, #de3163, #ab274f);
+  color: #d7adb9 !important;
+  font-family: "Mate SC", serif;
 }
 
 /* Body layout */
@@ -12,4 +16,20 @@ main > div {
 .project-item,
 .todo-item {
   list-style: none;
+}
+
+.btn {
+  background: #c2b280 !important;
+  /* background: #d7adb9 !important; */
+}
+
+.text-decoration-line-through {
+  color: #d7adb9 !important;
+}
+
+.form-width {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
