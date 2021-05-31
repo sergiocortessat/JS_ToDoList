@@ -18,8 +18,15 @@ const createTodoList = (projects, todoList) => {
     todoName.classList.add('text-decoration-line-through');
   }
 
+  const editButton = document.createElement('button');
+  editButton.classList.add('btn', 'edit-btn');
+
+  const editButtonIcon = dom.myCreate('i');
+  editButtonIcon.classList.add('bi', 'bi-pencil-square');
+
+  editButton.appendChild(editButtonIcon);
   todoButton.appendChild(todoButtonIcon);
-  todoItem.append(todoButton, todoName);
+  todoItem.append(todoButton, editButton, todoName);
 
   todoButton.addEventListener('click', () => {
     if (todoList.itemStatus === false) {
@@ -35,6 +42,10 @@ const createTodoList = (projects, todoList) => {
     }
 
     localStorage.setItem('projects', JSON.stringify(projects));
+  });
+
+  editButton.addEventListener('click', (e) => {
+    console.log(todoList.itemTitle = "pizza");
   });
 
   return todoItem;

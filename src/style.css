@@ -19,9 +19,12 @@ main > div {
   border-radius: 50%;
 }
 
-.project-item > button,
+.project-item > button {
+  border-radius: 20% 50%;
+}
+
 .todo-item > button {
-  border-radius: 50%;
+  border-radius: 50% 20%;
 }
 
 .btn {
