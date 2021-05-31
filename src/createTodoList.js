@@ -1,6 +1,5 @@
 import populate from 'populate.js';
 import * as dom from './dom';
-import todoItem from './todoItem';
 
 const createTodoList = (projects, todoList) => {
   const todoItem = dom.myCreate('li');
@@ -20,8 +19,8 @@ const createTodoList = (projects, todoList) => {
     todoName.classList.add('text-decoration-line-through');
   }
 
-  const editButton = document.createElement('button');
-  editButton.classList.add('btn', 'edit-btn');
+  const editButton = dom.myCreate('button');
+  editButton.classList.add('btn', 'edit-btn', 'text-white', 'm-1');
 
   const editButtonIcon = dom.myCreate('i');
   editButtonIcon.classList.add('bi', 'bi-pencil-square');
@@ -47,21 +46,37 @@ const createTodoList = (projects, todoList) => {
   });
 
   editButton.addEventListener('click', () => {
-    const formElement = dom.myQuery('#submit-form');
+    const formElement = dom.myQuery('#submit-edit-form');
+    const formSubmit = dom.myQuery('#submit-form');
 
     if (formElement.classList.contains('d-none')) {
       formElement.classList.remove('d-none');
+      formSubmit.classList.add('d-none');
+    } else {
+      formElement.classList.add('d-none');
     }
     const data = {
-      title: todoList.itemTitle,
-      description: todoList.itemDescription,
-      read: todoList.itemDueDate,
-      priority: todoList.itemPriority,
+      'edit-title': todoList.itemTitle,
+      'edit-description': todoList.itemDescription,
+      'edit-read': todoList.itemDueDate,
+      'edit-priority': todoList.itemPriority,
     };
 
     populate(formElement, data);
-
-    const ui = dom.myQuery('.form-container');
+  });
+  const submitBtnEdit = dom.myQuery('.submit-btn-edit');
+  submitBtnEdit.addEventListener('click', (todoData) => {
+    todoData.preventDefault();
+    const title = dom.myQuery('#edit-title').value;
+    const description = dom.myQuery('#edit-description').value;
+    const dueDate = dom.myQuery('#edit-due-date').value;
+    const priority = dom.myQuery('#edit-priority').value;
+    todoList.itemTitle = title;
+    todoList.itemDescription = description;
+    todoList.itemDueDate = dueDate;
+    todoList.itemPriority = priority;
+    localStorage.setItem('projects', JSON.stringify(projects));
+    window.location.reload();
   });
   return todoItem;
 };

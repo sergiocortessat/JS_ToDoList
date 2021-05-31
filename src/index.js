@@ -1,12 +1,12 @@
 import './style.css';
-import { format } from 'date-fns';
+// import { format } from 'date-fns';
 import * as dom from './dom';
 import createTodoList from './createTodoList';
 import './addTodo';
 import deleteButton from './deleteButton';
 import clearButton from './clearButton';
 import renderProjects from './renderProjects';
-import todoItem from './todoItem'
+import todoItem from './todoItem';
 
 // CREATE FIRST PROJECTS
 
@@ -79,7 +79,7 @@ addProject.addEventListener('click', (e) => {
 });
 
 const submitButton = () => {
-  const submitBtn = dom.myQuery('.submit-btn');
+  const submitBtn = dom.myQuery('.submit-btn-new');
   submitBtn.addEventListener('click', (todoData) => {
     todoData.preventDefault();
     const title = dom.myQuery('#title').value;
