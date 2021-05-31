@@ -27,7 +27,7 @@
 
 ## Live Version
 
-* [Live Demo and Video](https://sergiocortessat.github.io/JS_ToDoList/) 
+* [Live Demo](https://sergiocortessat.github.io/JS_ToDoList/) 
 
 <!-- ABOUT THE PROJECT   -->
 ## About The Project
