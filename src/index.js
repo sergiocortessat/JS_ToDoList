@@ -1,5 +1,4 @@
 import './style.css';
-// import { format } from 'date-fns';
 import * as dom from './dom';
 import createTodoList from './createTodoList';
 import './addTodo';
@@ -76,6 +75,7 @@ addProject.addEventListener('click', (e) => {
   renderProjects(projects);
   findProjectButtons();
   localStorage.setItem('projects', JSON.stringify(projects));
+  addProject.parentNode.parentNode.reset();
 });
 
 const submitButton = () => {
