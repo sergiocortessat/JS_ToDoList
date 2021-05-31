@@ -5,7 +5,7 @@ const clearButton = (projects, projectButton) => {
   const buttonsDiv = dom.myQuery('.buttons');
   const clearButton = dom.myCreate('button');
   clearButton.classList.add('btn', 'text-white', 'm-1');
-  clearButton.innerText = 'Clear Tasks';
+  clearButton.innerText = 'Clear Completed Tasks';
   buttonsDiv.appendChild(clearButton);
   clearButton.addEventListener('click', () => {
     const proj = (projects.find(({ name }) => name === projectButton.nextElementSibling.innerText));
