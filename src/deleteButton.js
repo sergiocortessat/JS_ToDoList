@@ -1,10 +1,10 @@
 import * as dom from './dom';
 import renderProjects from './renderProjects';
 
-function deleteButton(projects, projectButton) {
+const deleteButton = (projects, projectButton) => {
   const buttonsDiv = dom.myQuery('.buttons');
   const deleteButton = dom.myCreate('button');
-  deleteButton.classList.add('btn', 'btn-danger', 'm-1');
+  deleteButton.classList.add('btn', 'text-white', 'm-1');
   deleteButton.innerText = 'Delete Project';
   buttonsDiv.appendChild(deleteButton);
   deleteButton.addEventListener('click', () => {
@@ -14,5 +14,6 @@ function deleteButton(projects, projectButton) {
     renderProjects();
     window.location.reload();
   });
-}
+};
+
 export default deleteButton;

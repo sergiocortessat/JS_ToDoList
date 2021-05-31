@@ -24,15 +24,15 @@ let projects = [
   },
 ];
 // GET FROM STORAGE
-function getProjects() {
+const getProjects = () => {
   const storage = JSON.parse(localStorage.getItem('projects'));
   if (storage) {
     projects = [];
     projects = projects.concat(storage);
   }
-}
+};
 // ADD PROJECTS TO SUBMIT DROPDOWN
-function addProjectsToDropdown() {
+const addProjectsToDropdown = () => {
   if (projects) {
     const select = document.getElementById('projects');
     select.innerHTML = '';
@@ -40,9 +40,9 @@ function addProjectsToDropdown() {
       select.add(new Option(project.name));
     });
   }
-}
+};
 // FIND BUTTONS
-function findProjectButtons() {
+const findProjectButtons = () => {
   const projectButtons = document.querySelectorAll('.project-btn');
   projectButtons.forEach((projectButton, index) => {
     projectButton.addEventListener('click', () => {
@@ -57,7 +57,7 @@ function findProjectButtons() {
       deleteButton(projects, projectButton);
     });
   });
-}
+};
 // ADD PROJECT
 const addProject = dom.myQuery('.new-project-btn');
 addProject.addEventListener('click', (e) => {
@@ -87,7 +87,7 @@ const todoItem = (title, description, dueDate, priority, project, status = false
     itemTitle, itemDescription, itemDueDate, itemPriority, itemProject, itemStatus,
   };
 };
-function submitButton() {
+const submitButton = () => {
   const submitBtn = dom.myQuery('.submit-btn');
   submitBtn.addEventListener('click', (todoData) => {
     todoData.preventDefault();
@@ -102,7 +102,7 @@ function submitButton() {
     ui.appendChild(createTodoList(projects, newTodoItem));
     localStorage.setItem('projects', JSON.stringify(projects));
   });
-}
+};
 // RUN FUNCTIONS
 getProjects();
 addProjectsToDropdown();

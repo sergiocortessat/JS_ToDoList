@@ -1,7 +1,7 @@
 import * as dom from './dom';
 import createProject from './createProject';
 
-function renderProjects(projects) {
+const renderProjects = (projects) => {
   if (projects) {
     const projectItemsList = dom.myQuery('.project-items-list');
     projectItemsList.innerHTML = '';
@@ -9,5 +9,6 @@ function renderProjects(projects) {
       projectItemsList.append(createProject(project));
     });
   }
-}
+};
+
 export default renderProjects;

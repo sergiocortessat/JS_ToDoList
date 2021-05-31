@@ -1,10 +1,10 @@
 import * as dom from './dom';
 import renderProjects from './renderProjects';
 
-function clearButton(projects, projectButton) {
+const clearButton = (projects, projectButton) => {
   const buttonsDiv = dom.myQuery('.buttons');
   const clearButton = dom.myCreate('button');
-  clearButton.classList.add('btn', 'btn-danger', 'm-1');
+  clearButton.classList.add('btn', 'text-white', 'm-1');
   clearButton.innerText = 'Clear Tasks';
   buttonsDiv.appendChild(clearButton);
   clearButton.addEventListener('click', () => {
@@ -15,5 +15,6 @@ function clearButton(projects, projectButton) {
     renderProjects();
     window.location.reload();
   });
-}
+};
+
 export default clearButton;
