@@ -68,7 +68,7 @@ Terminal or similar to execute the program.
 - $ git checkout develop
 - $ cd JS_ToDoList
 - $ npm start
-- $(If project doesn't build) npx webpack
+- ##(If project doesn't build, please run): $ npx webpack
 ```
 
 ## Authors
