@@ -64,20 +64,6 @@ const createTodoList = (projects, todoList) => {
 
     populate(formElement, data);
   });
-  const submitBtnEdit = dom.myQuery('.submit-btn-edit');
-  submitBtnEdit.addEventListener('click', (todoData) => {
-    todoData.preventDefault();
-    const title = dom.myQuery('#edit-title').value;
-    const description = dom.myQuery('#edit-description').value;
-    const dueDate = dom.myQuery('#edit-due-date').value;
-    const priority = dom.myQuery('#edit-priority').value;
-    todoList.itemTitle = title;
-    todoList.itemDescription = description;
-    todoList.itemDueDate = dueDate;
-    todoList.itemPriority = priority;
-    localStorage.setItem('projects', JSON.stringify(projects));
-    window.location.reload();
-  });
   return todoItem;
 };
 
