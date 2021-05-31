@@ -16,6 +16,12 @@ main > div {
 .project-item,
 .todo-item {
   list-style: none;
+  border-radius: 50%;
+}
+
+.project-item > button,
+.todo-item > button {
+  border-radius: 50%;
 }
 
 .btn {
