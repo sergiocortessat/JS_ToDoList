@@ -12,6 +12,7 @@ addTodo.addEventListener('click', (e) => {
   } else {
     e.target.innerHTML = '<i class="bi bi-plus"></i>';
     form.classList.add('d-none');
+    formEdit.classList.add('d-none');
   }
   form.reset();
 });
