@@ -27,11 +27,11 @@
 
 ## Live Version
 
-* [Live Demo and Video](https://sergiocortessat.github.io/JS-RestaurantPage/) 
+* [Live Demo](https://sergiocortessat.github.io/JS_ToDoList/) 
 
 <!-- ABOUT THE PROJECT   -->
 ## About The Project
-The Restaurant project pages displays the main menu page of the restaurant with short description. This page is composed as a one-page webapp. The page uses webpack to bundle the scripts
+The To-Do-List web application allows user to set different projects (Lists name) and set different to-do items for each project individually. Each project can hold as many to-do-items as the users wishes. He can edit its information, mark each to-do task as completed, clear the completed tasks and delete the main project folder.
 
 
 ## Screenshot Test
@@ -46,7 +46,7 @@ The Restaurant project pages displays the main menu page of the restaurant with 
 
 Contributions make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## Prequisites
+## Prerequisites
 
 Terminal or similar to execute the program.
 
@@ -57,14 +57,18 @@ Terminal or similar to execute the program.
 ## Clone project
 
 - To get a local copy up and running follow these simple example steps.
-- Clone this repository with git clone ```https://github.com/sergiocortessat/JS-RestaurantPage``` using your terminal or command line.
-- Change to the project directory by entering: ```cd JS-RestaurantPage``` in the terminal.
+- Clone this repository with git clone ```https://github.com/sergiocortessat/JS_ToDoList``` using your terminal or command line.
+- Change to the project directory by entering: ```cd JS_ToDoList``` in the terminal.
+- Enter the project folder and run locally by using npm start.
+- If the project cant be build, please run npx webpack.
 
 ## Command line steps
 ```
-- $ git clone `$ git clone https://github.com/sergiocortessat/JS-RestaurantPage
+- $ git clone `$ git clone https://github.com/sergiocortessat/JS_ToDoList
 - $ git checkout develop
-- $ cd JS-RestaurantPage
+- $ cd JS_ToDoList
+- $ npm start
+- ##(If project doesn't build, please run): $ npx webpack
 ```
 
 ## Authors

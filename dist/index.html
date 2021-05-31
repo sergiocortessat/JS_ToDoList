@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>ToDo List</title>
+  </head>
+
+  <body class="text-white">
+    <header class="mt-5">
+      <h1 class="text-center">TO-DO-LIST APP</h1>
+    </header>
+
+    <main
+      class="
+        container
+        d-flex
+        flex-column
+        align-items-start
+        flex-md-row
+        justify-content-center
+        my-4
+      "
+    >
+      <div class="projects mx-auto mx-md-2 mt-2">
+        <h2 class="text-center mt-3">PROJECTS</h2>
+        <form class="container">
+          <div class="d-flex mb-3">
+            <input
+              placeholder="New Project"
+              type="text"
+              class="form-control m-1"
+              id="new-project"
+            />
+            <button class="new-project-btn btn btn-secondary m-1">
+              <i class="bi bi-plus"></i>
+            </button>
+          </div>
+        </form>
+        <div class="project-items">
+          <ul class="project-items-list fs-4"></ul>
+        </div>
+      </div>
+
+      <div class="todo-list mx-auto mx-md-2 mt-2">
+        <h2 class="text-center mt-3">TODO ITEMS</h2>
+        <button class="add-todo w-100 btn btn-secondary m-1">
+          <i class="bi bi-plus"></i>
+        </button>
+        <div class="todo-items mt-3">
+          <ul class="todo-items-list fs-4"></ul>
+        </div>
+        <div class="buttons d-flex justify-content-evenly my-3">
+          <!-- <button class="btn btn-secondary m-1">Clear Tasks</button>
+        <button class="btn-delete btn btn-secondary m-1">Delete List</button> -->
+        </div>
+      </div>
+    </main>
+
+    <!-- FORM FOR Submit -->
+    <div class="mt-5 mb-5 text-center form-width">
+      <form action="" class="form w-50 mx-auto d-none" id="submit-form">
+        <label for="title">Title</label>
+        <input class="form-control" type="text" name="title" id="title" required /><br />
+
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          type="text"
+          name="description"
+          id="description"
+          required
+        /><br />
+
+        <label for="due-date" required>Due date</label><br />
+        <input
+          type="date"
+          id="due-date"
+          name="read"
+          value="Due date"
+          required
+        /><br /><br />
+
+        <label for="priority" required>Priority (1-5)</label>
+        <input
+          class="form-control"
+          type="number"
+          name="priority"
+          id="priority"
+          min="1"
+          max="5"
+          required
+        /><br />
+
+        <select name="projects" id="projects" required></select>
+
+        <div class="mt-3">
+          <button class="submit-btn btn btn-secondary w-100 submit-btn-new" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+ <!-- FORM FOR EDIT -->
+    <div class="mt-5 mb-5 text-center form-width form-container">
+      <form action="" class="form w-50 mx-auto d-none" id="submit-edit-form">
+        <label for="title">Title</label>
+        <input class="form-control" type="text" name="edit-title" id="edit-title" /><br />
+
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          type="text"
+          name="edit-description"
+          id="edit-description"
+        /><br />
+
+        <label for="due-date">Due date</label><br />
+        <input
+          type="date"
+          id="edit-due-date"
+          name="edit-read"
+          value="Due date"
+        /><br /><br />
+
+        <label for="priority">Priority (1-5)</label>
+        <input
+          class="form-control"
+          type="number"
+          name="edi-priority"
+          id="edit-priority"
+          min="1"
+          max="5"
+        /><br />
+
+
+        <div class="mt-3">
+          <button class="submit-btn btn btn-secondary w-100 submit-btn-edit" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <div class="text-center">
+        <span class="">&copy; Sergio Cortes 2021</span>
+      </div>
+    </footer>
+    <script src="bundle.js"></script>
+  </body>
 </html>
