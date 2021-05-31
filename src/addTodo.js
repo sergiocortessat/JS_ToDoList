@@ -1,7 +1,7 @@
 import * as dom from './dom';
 
 const addTodo = dom.myQuery('.add-todo');
-const form = dom.myQuery('.form');
+const form = dom.myQuery('#submit-form');
 
 addTodo.addEventListener('click', (e) => {
   if (form.classList.contains('d-none')) {
@@ -11,4 +11,5 @@ addTodo.addEventListener('click', (e) => {
     e.target.innerHTML = '<i class="bi bi-plus"></i>';
     form.classList.add('d-none');
   }
+  form.reset();
 });

@@ -1,4 +1,6 @@
+import populate from 'populate.js';
 import * as dom from './dom';
+import todoItem from './todoItem';
 
 const createTodoList = (projects, todoList) => {
   const todoItem = dom.myCreate('li');
@@ -44,10 +46,23 @@ const createTodoList = (projects, todoList) => {
     localStorage.setItem('projects', JSON.stringify(projects));
   });
 
-  editButton.addEventListener('click', (e) => {
-    console.log(todoList.itemTitle = "pizza");
-  });
+  editButton.addEventListener('click', () => {
+    const formElement = dom.myQuery('#submit-form');
 
+    if (formElement.classList.contains('d-none')) {
+      formElement.classList.remove('d-none');
+    }
+    const data = {
+      title: todoList.itemTitle,
+      description: todoList.itemDescription,
+      read: todoList.itemDueDate,
+      priority: todoList.itemPriority,
+    };
+
+    populate(formElement, data);
+
+    const ui = dom.myQuery('.form-container');
+  });
   return todoItem;
 };
 

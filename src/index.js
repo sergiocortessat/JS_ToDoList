@@ -1,11 +1,12 @@
 import './style.css';
-// import { format } from 'date-fns';
+import { format } from 'date-fns';
 import * as dom from './dom';
 import createTodoList from './createTodoList';
 import './addTodo';
 import deleteButton from './deleteButton';
 import clearButton from './clearButton';
 import renderProjects from './renderProjects';
+import todoItem from './todoItem'
 
 // CREATE FIRST PROJECTS
 
@@ -76,17 +77,7 @@ addProject.addEventListener('click', (e) => {
   findProjectButtons();
   localStorage.setItem('projects', JSON.stringify(projects));
 });
-const todoItem = (title, description, dueDate, priority, project, status = false) => {
-  const itemTitle = title;
-  const itemDescription = description;
-  const itemDueDate = dueDate;
-  const itemPriority = priority;
-  const itemProject = project;
-  const itemStatus = status;
-  return {
-    itemTitle, itemDescription, itemDueDate, itemPriority, itemProject, itemStatus,
-  };
-};
+
 const submitButton = () => {
   const submitBtn = dom.myQuery('.submit-btn');
   submitBtn.addEventListener('click', (todoData) => {
