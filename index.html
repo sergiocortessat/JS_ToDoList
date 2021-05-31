@@ -68,8 +68,51 @@
       </div>
     </main>
 
+    <!-- FORM FOR Submit -->
     <div class="mt-5 mb-5 text-center form-width">
-      <form action="" class="form w-50 mx-auto d-none">
+      <form action="" class="form w-50 mx-auto d-none" id="submit-form">
+        <label for="title">Title</label>
+        <input class="form-control" type="text" name="title" id="title" /><br />
+
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          type="text"
+          name="description"
+          id="description"
+        /><br />
+
+        <label for="due-date">Due date</label><br />
+        <input
+          type="date"
+          id="due-date"
+          name="read"
+          value="Due date"
+        /><br /><br />
+
+        <label for="priority">Priority (1-5)</label>
+        <input
+          class="form-control"
+          type="number"
+          name="priority"
+          id="priority"
+          min="1"
+          max="5"
+        /><br />
+
+        <select name="projects" id="projects"></select>
+
+        <div class="mt-3">
+          <button class="submit-btn btn btn-secondary w-100" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+ <!-- FORM FOR EDIT -->
+    <div class="mt-5 mb-5 text-center form-width form-container">
+      <form action="" class="form w-50 mx-auto d-none" id="submit-form">
         <label for="title">Title</label>
         <input class="form-control" type="text" name="title" id="title" /><br />
 
