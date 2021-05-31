@@ -12,7 +12,7 @@ const createProject = (project) => {
   projectButton.classList.add('project-btn', 'btn', 'm-2');
 
   const projectButtonIcon = dom.myCreate('i');
-  projectButtonIcon.classList.add('bi','text-white', 'bi-folder');
+  projectButtonIcon.classList.add('bi', 'text-white', 'bi-folder');
 
   projectButton.append(projectButtonIcon);
   projectItem.append(projectButton, projectName);
