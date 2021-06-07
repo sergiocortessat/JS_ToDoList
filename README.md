@@ -31,7 +31,7 @@
 
 <!-- ABOUT THE PROJECT   -->
 ## About The Project
-The To-Do-List web application allows user to set different projects (Lists name) and set different to-do items for each project individually. Each project can hold as many to-do-items as the users wishes. He can edit its information, mark each to-do task as completed, clear the completed tasks and delete the main project folder.
+The To-Do-List web application allows users to set different projects (Lists name) and set different to-do items for each project individually. Each project can hold as many to-do-items as the user wishes. He can edit its information, mark each to-do task as completed, clear the completed tasks and delete the main project folder.
 
 
 ## Screenshot Test
