@@ -1,5 +1,50 @@
 import populate from 'populate.js';
-import * as dom from './dom';
+import * as dom from './myQueries';
+// import renderProjects from './renderProjects';
+const createProject = (project) => {
+  const projectItem = dom.myCreate('li');
+  projectItem.dataset.projectId = project.id;
+  projectItem.classList.add('project-item');
+
+  const projectName = dom.myCreate('span');
+  projectName.textContent = project.name;
+
+  const projectButton = dom.myCreate('button');
+  projectButton.classList.add('project-btn', 'btn', 'm-2');
+
+  const projectButtonIcon = dom.myCreate('i');
+  projectButtonIcon.classList.add('bi', 'text-white', 'bi-folder');
+
+  projectButton.append(projectButtonIcon);
+  projectItem.append(projectButton, projectName);
+
+  return projectItem;
+};
+
+const renderProjects = (projects) => {
+  if (projects) {
+    const projectItemsList = dom.myQuery('.project-items-list');
+    projectItemsList.innerHTML = '';
+    projects.forEach((project) => {
+      projectItemsList.append(createProject(project));
+    });
+  }
+};
+const clearButton = (projects, projectButton) => {
+  const buttonsDiv = dom.myQuery('.buttons');
+  const clearButton = dom.myCreate('button');
+  clearButton.classList.add('btn', 'text-white', 'm-1');
+  clearButton.innerText = 'Clear Completed Tasks';
+  buttonsDiv.appendChild(clearButton);
+  clearButton.addEventListener('click', () => {
+    const proj = (projects.find(({ name }) => name === projectButton.nextElementSibling.innerText));
+    const notCompleted = proj.todoList.filter((notCompleted) => notCompleted.itemStatus === false);
+    proj.todoList = notCompleted;
+    localStorage.setItem('projects', JSON.stringify(projects));
+    renderProjects();
+    window.location.reload();
+  });
+};
 
 const createTodoList = (projects, todoList) => {
   const todoItem = dom.myCreate('li');
@@ -86,4 +131,24 @@ const createTodoList = (projects, todoList) => {
   return todoItem;
 };
 
-export default createTodoList;
+const deleteButton = (projects, projectButton) => {
+  const buttonsDiv = dom.myQuery('.buttons');
+  const deleteButton = dom.myCreate('button');
+  deleteButton.classList.add('btn', 'text-white', 'm-1');
+  deleteButton.innerText = 'Delete Project';
+  buttonsDiv.appendChild(deleteButton);
+  deleteButton.addEventListener('click', () => {
+    const proj = (projects.find(({ name }) => name === projectButton.nextElementSibling.innerText));
+    projects = projects.filter((project) => project !== proj);
+    localStorage.setItem('projects', JSON.stringify(projects));
+    renderProjects();
+    window.location.reload();
+  });
+};
+
+export {
+  createTodoList,
+  deleteButton,
+  renderProjects,
+  clearButton,
+};
