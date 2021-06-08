@@ -1,2 +1,4 @@
-const sum = (a, b) => a + b;
-export default sum
+export function main() {
+  const selectElement = document.querySelector('#selectbox');
+  return selectElement;
+}

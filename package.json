@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "jest",
+    "watch": "jest --watch",
     "build": "webpack",
     "start": "webpack serve --open",
     "dev": "webpack --mode development"
@@ -38,6 +39,7 @@
   "dependencies": {
     "babel": "^6.23.0",
     "date-fns": "^2.21.3",
+    "jsdom": "^16.6.0",
     "populate.js": "^1.2.2"
   }
 }
