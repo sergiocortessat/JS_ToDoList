@@ -1,6 +1,6 @@
 import todoItem from './todoItem';
 
-const projects = [
+const testProjects = [
   {
     name: 'Your first project',
     todoList: [
@@ -14,20 +14,6 @@ const projects = [
     ],
   },
 ];
-
-// TEST PROJECT ARRAY
-
-describe('Testing that project array ', () => {
-  test('contains a default project object', () => {
-    expect(projects[0]).not.toBe(null);
-  });
-  test('contains a default project object', () => {
-    expect(projects[0]).not.toBeInstanceOf(Array);
-  });
-  test('contains a default project object', () => {
-    expect(projects[0]).toBeInstanceOf(Object);
-  });
-});
 
 // TEST CREATING TODO ITEM OBJECT
 describe('Creating', () => {
@@ -45,17 +31,17 @@ describe('Creating', () => {
 // TEST PUSHING OBJECT TO PROJECT ARRAY
 describe('Test pushing an object to the project array: ', () => {
   const newTodoItem = todoItem('testTitle', 'testDescription', new Date(2021, 8, 19), 5, 'Your first project', true);
-  projects.find(({ name }) => name === newTodoItem.itemProject).todoList.push(newTodoItem);
+  testProjects.find(({ name }) => name === newTodoItem.itemProject).todoList.push(newTodoItem);
   test('the new todo item can be pushed into the correct project', () => {
-    expect(projects[0].todoList[0]).not.toBe(null);
+    expect(testProjects[0].todoList[0]).not.toBe(null);
   });
   test('the new todo item can be pushed into the correct project', () => {
-    expect(projects[0].todoList[0]).not.toBe(newTodoItem);
+    expect(testProjects[0].todoList[0]).not.toBe(newTodoItem);
   });
   test('the new todo item can be pushed into the correct project', () => {
-    expect(projects[0].todoList[1]).not.toBe(null);
+    expect(testProjects[0].todoList[1]).not.toBe(null);
   });
   test('the new todo item can be pushed into the correct project', () => {
-    expect(projects[0].todoList[1]).toBe(newTodoItem);
+    expect(testProjects[0].todoList[1]).toBe(newTodoItem);
   });
 });
