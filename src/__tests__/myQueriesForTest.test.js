@@ -1,4 +1,4 @@
-import { myCreate, myQuery, myAppend } from '../js/myQueriesForTest';
+import { myCreate, myQuery, myAppend } from './myQueriesForTest';
 
 describe('My Query', () => {
   test('Should return the selected p tag', () => {
