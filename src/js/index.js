@@ -1,4 +1,4 @@
-import './style.css';
+import '../assets/style.css';
 import * as dom from './myQueries';
 import './addTodo';
 import todoItem from './todoItem';

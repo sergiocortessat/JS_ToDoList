@@ -1,4 +1,4 @@
-import todoItem from '../todoItem';
+import todoItem from '../js/todoItem';
 
 const testProjects = [
   {
