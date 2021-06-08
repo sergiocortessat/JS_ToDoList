@@ -55,7 +55,8 @@ const createTodoList = (projects, todoList) => {
     } else {
       formElement.classList.add('d-none');
     }
-    const data = {todoList
+    const data = {
+      todoList,
       'edit-title': todoList.itemTitle,
       'edit-description': todoList.itemDescription,
       'edit-read': todoList.itemDueDate,
