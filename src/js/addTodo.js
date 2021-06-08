@@ -1,4 +1,4 @@
-import * as dom from './dom';
+import * as dom from './myQueries';
 
 const addTodo = dom.myQuery('.add-todo');
 const form = dom.myQuery('#submit-form');

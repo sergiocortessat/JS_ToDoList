@@ -1,11 +1,14 @@
-import './style.css';
-import * as dom from './dom';
-import createTodoList from './createTodoList';
+import '../assets/style.css';
+import * as dom from './myQueries';
 import './addTodo';
-import deleteButton from './deleteButton';
-import clearButton from './clearButton';
-import renderProjects from './renderProjects';
 import todoItem from './todoItem';
+
+import {
+  createTodoList,
+  deleteButton,
+  renderProjects,
+  clearButton,
+} from './pushToDom';
 
 // CREATE FIRST PROJECTS
 

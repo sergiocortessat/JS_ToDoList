@@ -59,6 +59,7 @@ Terminal or similar to execute the program.
 - To get a local copy up and running follow these simple example steps.
 - Clone this repository with git clone ```https://github.com/sergiocortessat/JS_ToDoList``` using your terminal or command line.
 - Change to the project directory by entering: ```cd JS_ToDoList``` in the terminal.
+- Enter the command npm i
 - Enter the project folder and run locally by using npm start.
 - If the project cant be build, please run npx webpack.
 
@@ -67,8 +68,23 @@ Terminal or similar to execute the program.
 - $ git clone `$ git clone https://github.com/sergiocortessat/JS_ToDoList
 - $ git checkout develop
 - $ cd JS_ToDoList
+- $ npm i
 - $ npm start
 - ##(If project doesn't build, please run): $ npx webpack
+```
+
+## Testing
+
+The testing has been performed using Jest. 
+
+- To run the test please open the command line
+- Enter npm run test to run the testing once.
+- Enter npm run watch to keep jest test open
+
+```
+- $ cd JS_ToDoList
+- $ npm run test
+- $ npm run watch (optional)
 ```
 
 ## Authors
