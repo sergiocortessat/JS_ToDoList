@@ -84,7 +84,7 @@ The testing has been performed using Jest.
 ```
 - $ cd JS_ToDoList
 - $ npm run test
-- $ npm run watch (optional)
+- $ npm run watch  (optional)
 ```
 
 ## Authors
